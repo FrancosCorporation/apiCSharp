@@ -1,5 +1,25 @@
 # apiCSharp
 
+## 🐳 Instalação e Execução (Docker) — recomendado
+
+### Pré-requisitos
+- [Docker](https://docs.docker.com/get-docker/) + Docker Compose
+
+### Rodar com Docker
+```bash
+docker compose up --build
+```
+```bash
+docker run --rm -v $(pwd):/src -w /src mcr.microsoft.com/dotnet/sdk:8.0 dotnet run --project api
+```
+
+### Sem Docker (local)
+```bash
+# Requer .NET SDK
+dotnet build api
+dotnet run --project api
+```
+
 Projeto de estudo: esqueleto de Web API em ASP.NET Core 5 com Swagger configurado para documentar os endpoints durante o desenvolvimento.
 
 ![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white)
